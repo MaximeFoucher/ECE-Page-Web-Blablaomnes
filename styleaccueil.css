@@ -1,0 +1,540 @@
+@font-face {
+  font-family: 'MaSuperPolice';
+  src: url('HankenGrotesk-Medium.ttf') format('truetype'); 
+}
+
+.header {
+  background-color: #9ee1ab;
+  height: 8.5%;
+  width: 100vw;
+  border-bottom: 8px solid #383838;
+  box-shadow: 4px 0 5px rgba(0,0,0,1);
+}
+
+#icone {
+  cursor: pointer; 
+  margin-left: 5vw; 
+  font-size: 5vw; 
+  color: #383838;
+  position: absolute;
+  top: 33%;
+}
+
+.profil img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 0%;
+}
+
+#profil {
+  cursor: pointer;
+  position: absolute;
+  right: 5vw;
+  top: 30%;
+  border-radius: 50%;
+  color: #383838;
+  font-size: 5vw;
+}
+
+.trajet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  background-color: azure;
+  margin-top: 8vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  height: 28vw;
+  border-radius: 40px;
+  border: 8px solid #383838;
+}
+
+.noms {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.nom, .prenom, .prix {
+  color: #383838;
+  font-family: 'MaSuperPolice';
+  font-style: bold;
+  font-size: 4vw;
+}
+
+.prix {
+  font-weight: bold;
+  margin-top: 1vw;
+}
+
+.modal {
+  position: fixed;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: azure;
+  padding: 5%;
+  border-radius: 8vw;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 8px solid #383838;
+  position: relative;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.profile-icon {
+  background-color: transparent;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6vw;
+  color: white;
+  margin-right: 5%;
+}
+
+.profile-inputs {
+  flex: 1;
+}
+
+.input-group {
+  margin-bottom: 5%;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 1%;
+  font-size: 3vw;
+  color: #383838;
+}
+
+.input-field {
+  width: 100%;
+  padding: 2vw;
+  border-radius: 8px;
+  border: 1px solid #383838;
+  font-size: 3vw;
+  background-color: #f6f5f5;
+  color: #383838;
+  height: 6vw;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 2vw;
+  margin-bottom: 2%;
+  border-radius: 8px;
+  border: 1px solid #383838;
+  font-size: 3vw;
+  background-color: #f6f5f5;
+  color: #383838;
+  height: 6vw;
+}
+
+
+.modal .close-icon {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 4vw;
+  color: #383838;
+  cursor: pointer;
+}
+
+#menu1 {
+  width: 60%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: #9ee1ab; 
+  color: #383838; 
+  border-right: 8px solid #383838;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  padding-top: 22%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+#menu2 {
+  width: 60%; 
+  top: 0;
+  bottom: 0;
+  right: 0; 
+  position: fixed;
+  background-color: #9ee1ab; 
+  color: #383838; 
+  border-left: 8px solid #383838;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  padding-top: 22%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+#menu1 a, #menu2 a {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  border-top: 8px solid #005d0c;
+  border-bottom: 8px solid #005d0c;
+  text-align: center; 
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#logo {
+  position: absolute;
+  left: 29%;
+  transform: translateX(-50%);
+  top: 5%;
+  transform: translateY(-50%);
+}
+
+#logo img {
+  height: 170px;
+  width: auto;
+}
+
+#logo1 {
+  position: absolute;
+  left: 39%;
+  transform: translateX(-50%);
+  top: 47%;
+  transform: translateY(-50%);
+}
+
+#logo1 img {
+  height: 140px;
+  width: auto;
+}
+
+#close {
+  position: absolute;
+  cursor: pointer; 
+  left: 4.8vw;
+  top: 4.8vw;
+  font-size: 7vw; 
+  color: #383838;
+}
+
+#close2 {
+  position: absolute;
+  cursor: pointer; 
+  left: 4.8vw;
+  top: 4.8vw;
+  font-size: 7vw; 
+  color: #383838;
+}
+
+.deco {
+  background-color: azure;
+  border-radius: 15%;
+  padding: 5%;
+  color: #005d0c;
+  font-family: 'MaSuperPolice';
+  margin-top: 6%;
+  font-size: 44px;
+  font-weight: bold;
+}
+
+body {
+  background-color: #f6f5f5;
+}
+
+.rectanglefond {
+  background-color: azure;
+  margin: 10vw;
+  border-radius: 5rem;
+  display: flex;  
+  position: relative;
+  border: 8px solid #383838;
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.titre-principal {
+  font-family: 'MaSuperPolice';
+  color: #383838;
+  font-size: 65px;
+  font-weight: bold;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+.circleButton2 {
+  position: relative;
+  top: 1.5%;
+  left: 50%;
+  margin-top: 5%; 
+  margin-bottom: 5%;
+  transform: translateY(-50%);
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  border: 1vw solid #383838;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.recherche {
+  display: block;
+  margin: 12% auto;
+  background-color: #9ee1ab;
+  color: #383838;
+  border: none;
+  padding: 4% 20%;
+  font-size: 48px;
+  font-family: 'MaSuperPolice';
+  border-radius: 80px;
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.input-container {
+  display: flex;
+  align-items: center; 
+  left: 10%;
+  right: 10%;
+  position: relative;
+  margin: 20px 0;
+  width: 80%;
+  padding: 20px 0;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"],
+.input-container input[type="number"] {
+  font-size: 32px;
+  font-family: 'MaSuperPolice';
+  width: 100%;
+  border: none;
+  border-bottom: 5px solid #ccc;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="number"]:focus {
+  font-size: 32px;
+  font-family: 'MaSuperPolice';
+}
+
+.input-container .label {
+  position: absolute;
+  padding-left: 1.5%;
+  top: 0;
+  left: 0;
+  color: black;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: 42px;
+  font-family: 'MaSuperPolice';
+  opacity: 30%;
+}
+
+.input-container input:focus ~ .label,
+.input-container input:valid ~ .label {
+  top: -20px;
+  font-size: 25px;
+  color: #333;
+  font-family: 'MaSuperPolice';
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+.input-container input:focus ~ .underline,
+.input-container input:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+.input-container select {
+  font-size: 200%;
+  font-family: 'MaSuperPolice';
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  padding: 10px 0;
+}
+
+.input-container select:focus {
+  border-bottom: 2px solid #333;
+}
+
+.hidden {
+  display: none;
+}
+
+.pac-container {
+  font-size: 20px; /* Ajuste la taille de la police */
+  max-width: 600px; /* Ajuste la largeur de la fenêtre */
+  z-index: 1050; /* Assurez-vous que la fenêtre est au-dessus des autres éléments */
+}
+
+.pac-item {
+  padding: 10px; /* Ajuste le padding pour rendre les éléments plus grands */
+}
+
+.pac-item-query {
+  font-size: 20px; /* Ajuste la taille de la police de la requête */
+}
+
+.circleButton2 {
+  position: relative;
+  top: 1.5%;
+  left: 50%;
+  margin-top: 5%; 
+  margin-bottom: 5%;
+  transform: translateY(-50%);
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  border: 1vw solid #383838;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.swap-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  right: 10%; 
+  top: 39%; 
+  transform: translateY(-50%);
+  background-color: #383838; 
+  color: white; 
+  border: none;
+  width: 7vw; 
+  height: 7vw;
+  border-radius: 50%; 
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  border: 2px solid white; 
+  font-size: 4vw;
+  transform: rotate(90deg);
+}
+
+.group-container1 {
+  border: 2px solid rgba(51,51,51,45%);
+  border-radius: 3rem; 
+  background-color: azure; 
+  position: relative;
+}
+
+.group-container2 {
+  border: 2px solid rgba(51,51,51,45%);
+  border-radius: 3rem; 
+  background-color: azure; 
+  position: relative;
+}
+
+.group-container3 {
+  border: 2px solid rgba(51,51,51,45%);
+  border-radius: 3rem; 
+  background-color: azure; 
+  position: relative;
+}
+
+.icone2 {
+  position: absolute;
+  color: #383838;
+  font-size: 5vw;
+  padding: 0;
+  margin: 0;
+  left: 4%;
+}
+
+.icone3 {
+  position: absolute;
+  color: #383838;
+  font-size: 5vw;
+  padding: 0;
+  margin: 0;
+  left: 4%;
+  top:8%;
+}
+
+.icone4 {
+  position: absolute;
+  color: #383838;
+  font-size: 5vw;
+  padding: 0;
+  margin: 0;
+  left: 3.5%;
+  bottom: 30%;
+}
+
+#act {
+  display: block;
+  margin: 2% auto;
+  background-color: #9ee1ab;
+  color: #383838;
+  border: none;
+  padding: 2% 10%;
+  font-size: 36px;
+  font-family: 'MaSuperPolice';
+  border-radius: 60px;
+  box-shadow: 4px 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-align: center;
+  width: 80%;
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 2vw;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 4vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+.reserve-button:hover {
+  background-color: #45a049;
+}

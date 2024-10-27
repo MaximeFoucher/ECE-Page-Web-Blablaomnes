@@ -1,0 +1,365 @@
+@font-face {
+  font-family: 'MaSuperPolice';
+  src: url('HankenGrotesk-Medium.ttf') format('truetype');
+}
+
+body {
+  background-color: #f6f5f5;
+  overflow: hidden; /* Empêcher le body d'être défilable */
+}
+
+#main-content {
+  height: calc(100vh - 21%);
+  overflow-y: auto; /* Rendre le conteneur principal défilable */
+  padding-bottom: 21%; /* Ajouter un padding en bas pour éviter le chevauchement avec le bandeau */
+}
+
+.header{
+  background-color: #9ee1ab;
+  height: 8.5%;
+  width: 100vw;
+  border-bottom : 8px solid #383838;
+  box-shadow: 4px 0 5px rgba(0,0,0,1);
+  position: fixed; /* Rendre le header fixe en haut */
+  top: 0;
+  z-index: 1000;
+}
+
+#icone {
+  cursor: pointer; 
+  margin-left: 5vw; 
+  font-size: 5vw; 
+  color: #383838;
+  position: absolute;
+  top: 33%;
+}
+
+#profil{
+  cursor : pointer;
+  position: absolute;
+  right: 5vw;
+  top: 30%;
+  border-radius: 50%;
+  color:#383838;
+  font-size: 5vw;
+}
+
+#menu1 {
+  width: 60%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: #9ee1ab; 
+  color: #383838; 
+  border-right: 8px solid #383838;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  padding-top: 22%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+ }
+
+ #menu2 {
+  width: 60%; 
+  top: 0;
+  bottom: 0;
+  right: 0; 
+  position: fixed;
+  background-color: #9ee1ab; 
+  color: #383838; 
+  border-left: 8px solid #383838;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  padding-top: 22%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+ #menu1 a, #menu2 a {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  border-top: 8px solid #005d0c;
+  border-bottom: 8px solid #005d0c;
+  text-align: center; 
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#logo {
+position: absolute;
+left: 29%;
+transform: translateX(-50%);
+top: 5%;
+transform: translateY(-50%);
+}
+
+#logo img {
+height: 170px; /* Ajustez la taille selon vos besoins */
+width: auto;
+}
+
+#logo1 {
+position: absolute;
+left: 39%;
+transform: translateX(-50%);
+top: 47%;
+transform: translateY(-50%);
+}
+
+#logo1 img {
+height: 140px; /* Ajustez la taille selon vos besoins */
+width: auto;
+}
+
+#close {
+  position : absolute;
+  cursor: pointer; 
+  left : 4.8vw;
+  top:4.8vw;
+  font-size: 7vw; 
+  color: #383838;
+}
+
+#close2 {
+  position : absolute;
+  cursor: pointer; 
+  left : 4.8vw;
+  top:4.8vw;
+  font-size: 7vw; 
+  color: #383838;
+}
+
+.deco{
+background-color: azure;
+border-radius: 15%;
+padding: 5%;
+color: #005d0c;
+font-family: 'MaSuperPolice';
+margin-top: 6%;
+font-size: 44px;
+font-weight: bold;
+}
+
+.titre2{
+  font-family: 'MaSuperPolice';
+  font-size: 5vw;
+  text-align: center;
+  margin-top: 22%;
+  color: #383838;
+  font-style:bold;
+  text-decoration: underline;
+
+}
+
+.titre{
+  font-family: 'MaSuperPolice';
+  font-size: 5vw;
+  text-align: center;
+  margin-top: 5vw;
+  color: #383838;
+  font-style:bold;
+  text-decoration: underline;
+
+}
+
+.trajet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  background-color: azure;
+  margin-top: 8vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  width: 90vw;
+  height: 28vw;
+  border-radius: 40px;
+  border: 8px solid #383838;
+}
+
+.profil img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 0%;
+}
+
+.noms {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.nom, .prenom, .prix {
+  color: #383838;
+  font-family: 'MaSuperPolice';
+  font-style: bold;
+  font-size:4vw;
+}
+
+.prix {
+  font-weight: bold;
+  margin-top: 1vw;
+}
+
+.footer-button {
+  font-size: 6vw; 
+  padding: 1vw 3vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border: none;
+  background-color: #4CAF50; 
+  color: white;
+  position: absolute;
+  bottom: 70%; 
+  cursor: pointer; 
+  border-radius: 24px;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex; 
+  justify-content: space-evenly; 
+  align-items: center; 
+  background-color: #9ee1ab;
+  height: 21%; 
+  border-top: 2px solid #383838;
+  padding: 5vw 0; 
+  z-index: 100;
+}
+
+#footer > * {
+  position: relative; 
+}
+
+#balance {
+  position: relative;
+  font-size:6vw;
+}
+
+.balance-positive {
+  color: green; 
+}
+
+.balance-negative {
+  color: red; 
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 115%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: azure;
+  padding: 5%;
+  border-radius: 8vw;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 8px solid #383838;
+  position: relative;
+}
+
+.modal .close-icon {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  font-size: 4vw;
+  color: #383838;
+  cursor: pointer;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.profile-icon {
+  background-color: transparent;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6vw;
+  color: white;
+  margin-right: 5%;
+}
+
+.profile-inputs {
+  flex: 1;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 2vw;
+  margin-bottom: 2%;
+  border-radius: 8px;
+  border: 1px solid #383838;
+  font-size: 3vw;
+  background-color: #f6f5f5;
+  color: #383838;
+  height: 6vw;
+}
+
+.input-group {
+  margin-bottom: 5%;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 1%;
+  font-size: 3vw;
+  color: #383838;
+}
+
+.input-field {
+  width: 100%;
+  padding: 2vw;
+  border-radius: 8px;
+  border: 1px solid #383838;
+  font-size: 3vw;
+  background-color: #f6f5f5;
+  color: #383838;
+  height: 6vw;
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 2vw;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 4vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+.reserve-button:hover {
+  background-color: #45a049;
+}

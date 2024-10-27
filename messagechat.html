@@ -1,0 +1,144 @@
+<?php
+try {
+    $bdd = new PDO(
+        'mysql:host=localhost;dbname=blablaomnes;charset=utf8',
+        'root',
+        '',
+        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
+    );
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deconnexion'])) {
+        // Démarrer la session
+        session_start();
+
+        // Libérer toutes les variables de session
+        session_unset();
+
+        // Détruire la session
+        session_destroy();
+        header('Location: accueil.php');
+        exit();
+    }
+} catch (Exception $e) {
+    die('Erreur : ' . $e->getMessage());
+}
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BlaBla Omnes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/26275dc0b6.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="stylemessagechat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jsmessagechat.js" defer></script>
+</head>
+
+<body class="h-screen">
+    <div
+        class="header duration-500 flex justify-between bg-gradient-to-r from-slate-500 to-slate-500/75 text-center sticky top-0 text-4xl h-10 sm:h-1/5 sm:py-2 md:h-20 md:text-1xl lg:text-2xl lg:h-20 xl:text-2xl xl:h-20 z-20">
+        <!-- Icône de Menu Burger -->
+        <div id="icone">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div id="logo1">
+            <img src="images/file.png" alt="Logo" class="h-10">
+        </div>
+
+        <div id="menu1">
+            <div id="close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div id="logo">
+                <img src="images/file.png" alt="Logo" class="h-10">
+            </div>
+
+            <ul>
+                <?php
+                // Démarrez la session
+                session_start();
+
+                // Vérifiez si l'utilisateur est connecté
+                if (isset($_SESSION['username'])) {
+                    // Affichez le lien pour publier un trajet seulement si l'utilisateur est connecté
+                ?>
+                <li class="h-10 text-center hover:bg-stone-200"><a href="index.php" class="waitkey">Rechercher un
+                        trajet</a></li><br><br>
+                <li class="h-10 text-center hover:bg-stone-200"><a href="typetrajet.php" class="waitkey">Publier un
+                        trajet</a></li>
+                <?php
+                }
+                ?>
+            </ul>
+        </div>
+
+        <div id="profil">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div id="menu2">
+            <div id="close2">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div id="logo">
+                <img src="images/file.png" alt="Logo" class="h-10">
+            </div>
+
+            <ul>
+                <?php
+
+                // Vérifiez si l'utilisateur est connecté
+                if (isset($_SESSION['username'])) {
+                    // Affichez le lien pour publier un trajet seulement si l'utilisateur est connecté
+                ?>
+                <li class="h-10 text-center hover:bg-stone-200"><a href="profil.php" class="waitkey">Mon profil</a></li>
+                <br><br>
+                <li class="h-10 text-center hover:bg-stone-200"><a href="mestrajets.php" class="waitkey">Mes trajets</a>
+                </li><br><br>
+                <?php
+                } else {
+                ?>
+                <li class="h-10 text-center hover:bg-stone-200"><a href="connexion.php" class="waitkey">Connexion</a>
+                </li><br><br>
+                <li class="h-10 text-center hover:bg-stone-200"><a href="inscription1.php"
+                        class="waitkey">Inscritpion</a></li><br><br>
+                <?php
+                }
+                ?>
+            </ul>
+            <form method="POST" action="accueil.php">
+                <button type="submit" class="deco" name="deconnexion" action=""> Deconexion </button>
+                <div>
+                    <input type="hidden" name="deconnexion" value="deconnexion">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <a href="chat.html">
+        <div id="retour">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </a>
+
+    <h2 class="nom">Nom Prénom</h2>
+
+    <div class="chat-container">
+        <div class="chat-window" id="chat-window">
+            <!-- Les messages apparaîtront ici -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Tapez votre message...">
+            <button id="send-button">Envoyer</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('HankenGrotesk-Medium.ttf') format('truetype');
+  }
+  
+  .header{
+    background-color: #9ee1ab;
+    height: 8.5%;
+    width: 100vw;
+    border-bottom : 8px solid #383838;
+    box-shadow: 4px 0 5px rgba(0,0,0,1);
+  }
+  
+  #icone {
+    cursor: pointer; 
+    margin-left: 5vw; 
+    font-size: 5vw; 
+    color: #383838;
+    position: absolute;
+    top: 33%;
+  }
+  
+  #profil{
+    cursor : pointer;
+    position: absolute;
+    right: 5vw;
+    top: 30%;
+    border-radius: 50%;
+    color:#383838;
+    font-size: 5vw;
+  }
+  
+  #menu1 {
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: #9ee1ab; 
+    color: #383838; 
+    border-right: 8px solid #383838;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    padding-top: 22%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+   }
+  
+   #menu2 {
+    width: 60%; 
+    top: 0;
+    bottom: 0;
+    right: 0; 
+    position: fixed;
+    background-color: #9ee1ab; 
+    color: #383838; 
+    border-left: 8px solid #383838;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding-top: 22%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+  }
+  
+   #menu1 a, #menu2 a {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    border-top: 8px solid #005d0c;
+    border-bottom: 8px solid #005d0c;
+    text-align: center; 
+    padding: 20px;
+    margin: 10px 0;
+  }
+  
+  #logo {
+  position: absolute;
+  left: 29%;
+  transform: translateX(-50%);
+  top: 5%;
+  transform: translateY(-50%);
+  }
+  
+  #logo img {
+  height: 170px; /* Ajustez la taille selon vos besoins */
+  width: auto;
+  }
+  
+  #logo1 {
+  position: absolute;
+  left: 39%;
+  transform: translateX(-50%);
+  top: 47%;
+  transform: translateY(-50%);
+  }
+  
+  #logo1 img {
+  height: 140px; /* Ajustez la taille selon vos besoins */
+  width: auto;
+  }
+  
+  #close {
+    position : absolute;
+    cursor: pointer; 
+    left : 4.8vw;
+    top:4.8vw;
+    font-size: 7vw; 
+    color: #383838;
+  }
+  
+  #close2 {
+    position : absolute;
+    cursor: pointer; 
+    left : 4.8vw;
+    top:4.8vw;
+    font-size: 7vw; 
+    color: #383838;
+  }
+  
+  .deco{
+  background-color: azure;
+  border-radius: 15%;
+  padding: 5%;
+  color: #005d0c;
+  font-family: 'MaSuperPolice';
+  margin-top: 6%;
+  font-size: 44px;
+  font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .titre{
+    position: absolute;
+    top: 14.3%;
+    left: 5%;
+    display: inline-block; /* Permet au titre de ne pas prendre toute la largeur disponible */
+    border: solid 8px #9ee1ab; /* Bordure plus fine pour le titre */
+    border-radius: 4%;
+    padding: 1%;
+    color: #383838;
+    font-family: 'MaSuperPolice';
+    font-size: 60px;
+    font-weight: bold;
+}
+  
+  .crayon {
+    position: fixed;
+    top: 15%;
+    left: 85%;
+    width: 100px;
+    height: 100px;
+    background-color: #9ee1ab;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .fa-pen {
+    font-size: 50px;
+    color: #383838;
+  }
+  
+  .profil1, .profil2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    background-color: azure;
+    margin: 0 5vw; /* Réduisez encore la marge verticale */
+    margin-top: 30%;
+    margin-bottom: -20%;
+    width: calc(100vw - 10vw);
+    height: 28vw;
+    border-radius: 40px;
+    border: 8px solid #383838;
+    position: relative;
+  }
+  
+  .profil1 img, .profil2 img {
+    width: 20vw;
+    height: 20vw;
+  }
+  
+  .noms {
+    position: absolute;
+    top: 27%;
+    left: 28%;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+  
+.nom, .prenom {
+    color: #383838;
+    font-family: 'MaSuperPolice';
+    font-style: bold;
+    font-size: 4vw;
+}
+
+  .hidden {
+    display: none;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: azure;
+    padding: 5%;
+    border-radius: 8vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #383838;
+    position: relative;
+  }
+  
+  .modal .close-icon {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+    font-size: 70px;
+    color: #383838;
+    cursor: pointer;
+  }
+  
+  .profil2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    background-color: azure;
+    margin: 0 5vw; /* Réduisez encore la marge verticale */
+    margin-top: 13%;
+    margin-bottom: -5%;
+    width: 85%;
+    height: 85%;
+    border-radius: 40px;
+    border: 8px solid #383838;
+    position: relative;
+}
+
+.profil2 img {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 0%;
+}
+  
+.noms1 {
+    position: absolute;
+    top: 19%;
+    left: 30%;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+  
+.nom1, .prenom1 {
+    color: #383838;
+    font-family: 'MaSuperPolice';
+    font-style: bold;
+    font-size: 4vw;
+}

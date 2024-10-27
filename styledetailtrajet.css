@@ -1,0 +1,106 @@
+body {
+    background-color: #f6f5f5;
+    font-family: 'MaSuperPolice', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.reservation-card {
+    width: 80%;
+    height: 90%;
+    background-color: azure; 
+    padding: 5%;
+    border-radius: 8vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 8px solid #383838; 
+}
+
+.close-icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 4vw;
+    color: #383838; /* Couleur de l'icône */
+    cursor: pointer;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top : 5%;
+}
+
+.profile-icon {
+    background-color: #FF4500; /* Couleur de l'icône de profil */
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+    color: white;
+    margin-right: 5%;
+}
+
+.profile-inputs {
+    flex: 1;
+}
+
+.profile-input {
+    width: 100%;
+    padding: 2vw;
+    margin-bottom: 2%;
+    border-radius: 8px;
+    border: 1px solid #383838;
+    font-size: 3vw;
+    background-color: #f6f5f5;
+    color: #383838;
+    height: 6vw; /* Ajuster la hauteur pour des champs de texte plus grands */
+}
+
+.input-group {
+    margin-bottom: 5%;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 1%;
+    font-size: 3vw;
+    color: #383838; /* Couleur du texte */
+}
+
+.input-field {
+    width: 100%;
+    padding: 2vw;
+    border-radius: 8px;
+    border: 1px solid #383838;
+    font-size: 3vw;
+    background-color: #f6f5f5;
+    color: #383838;
+    height: 6vw; /* Ajuster la hauteur pour des champs de texte plus grands */
+}
+
+.reserve-button {
+    width: 100%;
+    padding: 2vw;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    font-size: 4vw;
+    cursor: pointer;
+    text-align: center;
+}
+
+.reserve-button:hover {
+    background-color: #45a049;
+}

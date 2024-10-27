@@ -1,0 +1,22 @@
+body {
+    background-color: #f6f5f5;
+}
+
+.header {
+    background-color: #9ee1ab;
+    height: 8.5%;
+    border-bottom: 8px solid #383838;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 12% auto;
+    background-color: #9ee1ab;
+    color: #383838;
+    border: none;
+    padding: 4% 20%;
+    font-size: 48px;
+    font-family: 'MaSuperPolice';
+    border-radius: 80px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

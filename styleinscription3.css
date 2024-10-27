@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'MaSuperPolice';
+  src: url('HankenGrotesk-Medium.ttf') format('truetype');
+}
+
+body {
+  background-color: #f6f5f5;
+}
+
+.header{
+  background-color: #9ee1ab;
+  height: 8.5%;
+  width: 100vw;
+  border-bottom : 8px solid #383838;
+  box-shadow: 4px 0 5px rgba(0,0,0,1);
+}
+
+#icone {
+  cursor: pointer; 
+  margin-left: 5vw; 
+  font-size: 5vw; 
+  color: #383838;
+  position: absolute;
+  top: 33%;
+}
+
+#profil{
+  cursor : pointer;
+  position: absolute;
+  right: 5vw;
+  top: 30%;
+  border-radius: 50%;
+  color:#383838;
+  font-size: 5vw;
+}
+
+#menu1 {
+  width: 60%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: #9ee1ab; 
+  color: #383838; 
+  border-right: 8px solid #383838;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  padding-top: 22%;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+ }
+
+ #menu2 {
+  width: 60%; 
+  top: 0;
+  bottom: 0;
+  right: 0; 
+  position: fixed;
+  background-color: #9ee1ab; 
+  color: #383838; 
+  border-left: 8px solid #383838;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  padding-top: 22%;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+ #menu1 a, #menu2 a {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  border-top: 8px solid #005d0c;
+  border-bottom: 8px solid #005d0c;
+  text-align: center; 
+  padding: 20px;
+  margin: 10px 0;
+}
+
+#logo {
+position: absolute;
+left: 29%;
+transform: translateX(-50%);
+top: 5%;
+transform: translateY(-50%);
+}
+
+#logo img {
+height: 170px; /* Ajustez la taille selon vos besoins */
+width: auto;
+}
+
+#logo1 {
+position: absolute;
+left: 39%;
+transform: translateX(-50%);
+top: 47%;
+transform: translateY(-50%);
+}
+
+#logo1 img {
+height: 140px; /* Ajustez la taille selon vos besoins */
+width: auto;
+}
+
+#close {
+  position : absolute;
+  cursor: pointer; 
+  left : 4.8vw;
+  top:4.8vw;
+  font-size: 7vw; 
+  color: #383838;
+}
+
+#close2 {
+  position : absolute;
+  cursor: pointer; 
+  left : 4.8vw;
+  top:4.8vw;
+  font-size: 7vw; 
+  color: #383838;
+}
+
+.deco{
+background-color: azure;
+border-radius: 15%;
+padding: 5%;
+color: #005d0c;
+font-family: 'MaSuperPolice';
+margin-top: 6%;
+font-size: 44px;
+font-weight: bold;
+}
+
+/*Place le rectangle de fond*/
+.container {
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+/*Parametre du rectangle de fond*/
+.registration-form {
+  background-color: azure;
+  padding: 7%;
+  border-radius: 40px;
+  border : 8px solid #383838;
+}
+
+/*Parametre du titre connexion*/
+.registration-form h2 {
+  font-family: 'MaSuperPolice';
+  color: #383838;
+  font-size: 70px;
+  font-weight: bold;
+  padding-bottom: 5%;
+  text-align: center;
+  padding-bottom: 8%;
+}
+
+.group {
+  margin-bottom: 8%;
+  padding-left: 5%;
+}
+
+.group label {
+  color: #383838;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 10%;
+}
+
+.group input {
+  padding: 3%;
+  background-color: #e0e0e0;
+  width: 93%;
+
+  margin-top: 3%;
+  border: 5px solid #9ee1ab;
+  border-radius: 25px;
+  font-size: 40px;
+  outline: none;
+  color: #808080;
+}
+
+.group input::placeholder {
+  color: #808080;
+}
+
+.group input[type="file"] {
+  padding: 3%;
+  background-color: #e0e0e0;
+  max-width: 93%;
+
+  border: 5px solid #9ee1ab;
+  border-radius: 25px;
+  font-size: 40px;
+  outline: none;
+  color: #808080;
+}
+
+.inscript3{
+  display: block;
+  margin: 12% auto;
+  background-color: #9ee1ab;
+  color: #383838;
+  border: none;
+  padding: 4% 20%;
+  font-size: 48px;
+  font-family: 'MaSuperPolice';
+  border-radius: 80px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.preview-container img {
+  max-width: 20%;
+  /* Définir une largeur maximale pour l'image */
+  max-height: 20%;
+  /* Définir une hauteur maximale pour l'image */
+}

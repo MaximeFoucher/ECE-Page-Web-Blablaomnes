@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Réserver un trajet</title>
+    <link rel="stylesheet" href="styledetailtrajet.css">
+    <script src="https://kit.fontawesome.com/26275dc0b6.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body class="h-screen">
+
+    <div class="reservation-card">
+        <div class="close-icon">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="profile-section">
+            <div class="profile-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-inputs">
+                <input type="text" placeholder="Nom" class="profile-input">
+                <input type="text" placeholder="Prénom" class="profile-input">
+            </div>
+        </div>
+        <div class="input-group">
+            <label class="input-label">Départ :</label>
+            <input type="text" value="2 Place Bellecour" class="input-field" readonly>
+        </div>
+        <div class="input-group">
+            <label class="input-label">Destination :</label>
+            <input type="text" value="Campus de Lyon" class="input-field" readonly>
+        </div>
+        <div class="input-group">
+            <label class="input-label">Marque de voiture :</label>
+            <input type="text" value="Audi" class="input-field" readonly>
+        </div>
+        <div class="input-group">
+            <label class="input-label">Modèle de voiture :</label>
+            <input type="text" value="RS3" class="input-field" readonly>
+        </div>
+        <div class="input-group">
+            <label class="input-label">Prix :</label>
+            <input type="text" value="20€" class="input-field" readonly>
+        </div>
+        <button class="reserve-button">Réserver</button>
+    </div>
+    
+</body>
+
+</html>

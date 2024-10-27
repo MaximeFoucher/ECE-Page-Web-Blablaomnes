@@ -1,0 +1,403 @@
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('HankenGrotesk-Medium.ttf') format('truetype');
+}
+
+body {
+    background-color: #f6f5f5;
+}
+
+.header {
+    background-color: #9ee1ab;
+    height: 8.5%;
+    width: 100vw;
+    border-bottom: 8px solid #383838;
+    box-shadow: 4px 0 5px rgba(0, 0, 0, 1);
+}
+
+#icone {
+    cursor: pointer;
+    margin-left: 5vw;
+    font-size: 5vw;
+    color: #383838;
+    position: absolute;
+    top: 33%;
+}
+
+#profil {
+    cursor: pointer;
+    position: absolute;
+    right: 5vw;
+    top: 30%;
+    border-radius: 50%;
+    color: #383838;
+    font-size: 5vw;
+}
+
+#menu1 {
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: #9ee1ab;
+    color: #383838;
+    border-right: 8px solid #383838;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    padding-top: 22%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+#menu2 {
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    background-color: #9ee1ab;
+    color: #383838;
+    border-left: 8px solid #383838;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding-top: 22%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+#menu1 a,
+#menu2 a {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    border-top: 8px solid #005d0c;
+    border-bottom: 8px solid #005d0c;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#logo {
+    position: absolute;
+    left: 29%;
+    transform: translateX(-50%);
+    top: 5%;
+    transform: translateY(-50%);
+}
+
+#logo img {
+    height: 170px;
+    /* Ajustez la taille selon vos besoins */
+    width: auto;
+}
+
+#logo1 {
+    position: absolute;
+    left: 39%;
+    transform: translateX(-50%);
+    top: 47%;
+    transform: translateY(-50%);
+}
+
+#logo1 img {
+    height: 140px;
+    /* Ajustez la taille selon vos besoins */
+    width: auto;
+}
+
+#close {
+    position: absolute;
+    cursor: pointer;
+    left: 4.8vw;
+    top: 4.8vw;
+    font-size: 7vw;
+    color: #383838;
+}
+
+#close2 {
+    position: absolute;
+    cursor: pointer;
+    left: 4.8vw;
+    top: 4.8vw;
+    font-size: 7vw;
+    color: #383838;
+}
+
+.deco {
+    background-color: azure;
+    border-radius: 15%;
+    padding: 5%;
+    color: #005d0c;
+    font-family: 'MaSuperPolice';
+    margin-top: 6%;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.input-container select {
+    font-size: 200%;
+    font-family: 'MaSuperPolice';
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    outline: none;
+    padding: 10px 0;
+}
+
+.input-container select:focus {
+    border-bottom: 2px solid #333;
+}
+
+/*Place le rectangle de fond*/
+.container {
+    margin: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    position:relative;
+}
+
+/*Parametre du rectangle de fond*/
+.poster-form {
+    padding: 7%;
+    background-color: azure;
+    border: 8px solid #383838;
+    border-radius: 40px;
+}
+
+/*Parametre du titre connexion*/
+.poster-form h2 {
+    font-family: 'MaSuperPolice';
+    color: #383838;
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.lieu {
+    padding-top: 5%;
+}
+
+.date {
+    padding-top: 5%;
+}
+
+.heure {
+    padding-top: 5%;
+}
+
+.passager {
+    padding-top: 5%;
+}
+
+.prix {
+    padding-top: 5%;
+}
+
+.commentaire {
+    padding-top: 5%;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    left: 10%;
+    right: 10%;
+    position: relative;
+    margin: 20px 0;
+    width: 80%;
+    padding: 20px 0;
+}
+
+.input-hidden::before {
+    content: attr(placeholder) " ";
+    color: transparent;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"],
+.input-container input[type="time"],
+.input-container input[type="number"] {
+    font-size: 32px;
+    font-family: 'MaSuperPolice';
+    width: 100%;
+    border: none;
+    border-bottom: 5px solid #ccc;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="time"]:focus,
+.input-container input[type="number"]:focus {
+    font-size: 32px;
+    font-family: 'MaSuperPolice';
+}
+
+.input-container .label {
+    position: absolute;
+    padding-left: 1.5%;
+    top: 0;
+    left: 0;
+    color: black;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-size: 42px;
+    font-family: 'MaSuperPolice';
+    opacity: 30%;
+}
+
+.input-container input:focus~.label,
+.input-container input:valid~.label {
+    top: -20px;
+    font-size: 25px;
+    color: #333;
+    font-family: 'MaSuperPolice';
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.input-container input:focus~.underline,
+.input-container input:valid~.underline {
+    transform: scaleX(1);
+}
+
+.swap-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    right: 10%; 
+    top: 58vw; 
+    transform: translateY(-50%);
+    background-color: #383838; 
+    color: white; 
+    border: none;
+    width: 7vw; 
+    height: 7vw;
+    border-radius: 50%; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border: 2px solid white; 
+    font-size: 4vw;
+    transform: rotate(90deg);
+  }
+
+.icone2 {
+    position: absolute;
+    color: #383838;
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    right: 105%;
+    bottom: 30%;
+}
+
+.icone3 {
+    position: absolute;
+    color: #383838;
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    right: 105%;
+    bottom: 30%;
+}
+
+.icone3bis {
+    position: absolute;
+    color: #383838;
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    right: 105%;
+    bottom: 30%;
+}
+
+.icone4 {
+    position: absolute;
+    color: #383838;
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    right: 105%;
+    bottom: 30%;
+}
+
+.icone5 {
+    position: absolute;
+    color: #383838;
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    right: 105%;
+    bottom: 30%;
+}
+
+.icone6 {
+    position: absolute;
+    color: #383838;
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+    right: 105%;
+    bottom: 30%;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 12% auto;
+    background-color: #9ee1ab;
+    color: #383838;
+    border: none;
+    padding: 4% 20%;
+    font-size: 48px;
+    font-family: 'MaSuperPolice';
+    border-radius: 80px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.commentaire textarea {
+    font-family: 'MaSuperPolice';
+    font-size: 40px;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    resize: vertical;
+}
+
+.commentaire .underline {
+    display: none;
+    /* Supprimer la ligne de soulignement pour le textarea */
+}
+
+#act {
+    display: block;
+    margin: 2% auto;
+    background-color: #9ee1ab;
+    color: #383838;
+    border: none;
+    padding: 2% 10%;
+    font-size: 36px;
+    font-family: 'MaSuperPolice';
+    border-radius: 60px;
+    box-shadow: 4px 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+  }
